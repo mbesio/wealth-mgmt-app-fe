@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TextField, MenuItem, Button, FormLabel } from '@mui/material'
-import { CURRENCIES, CATEGORIES } from './utils/Assets'
+import { CURRENCIES, CATEGORIES } from '../../utils/Assets'
 
 const AccountAssetsForm = () => {
   const [formState, setFormState] = useState({
@@ -16,21 +16,23 @@ const AccountAssetsForm = () => {
     })
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     // send to form to the backend
     // if ok/ no errors 1) clean the form; 2) modal (5 sec) response that account was created
+    e.preventDefault()
     console.log(
       'submitting the form - will hit the POST AccountsAsset endpoint'
     )
   }
-
+  // TO DO - add input validation here
   return (
     <form
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      onSubmit={handleSubmit}
     >
       <FormLabel>Add a new Asset</FormLabel>
       <TextField
-        style={{ width: '500px', margin: '5px' }}
+        sx={{ width: '500px', margin: '5px' }}
         type="text"
         label="name"
         name="name"
@@ -39,7 +41,7 @@ const AccountAssetsForm = () => {
         onChange={handleChange}
       />
       <TextField
-        style={{ width: '500px', margin: '5px' }}
+        sx={{ width: '500px', margin: '5px' }}
         select
         label="currency"
         name="currency"
@@ -69,9 +71,9 @@ const AccountAssetsForm = () => {
         ))}
       </TextField>
       <Button
-        style={{ width: '200px', margin: '5px' }}
+        type="submit"
+        sx={{ width: '200px', margin: '5px' }}
         variant="contained"
-        onClick={handleSubmit}
       >
         Create Asset
       </Button>

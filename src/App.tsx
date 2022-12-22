@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AccountAssetsForm from './AccountsAssetsForm'
+import AccountAssetsForm from './components/accountsAssets/AccountsAssetsForm'
 
 const App = () => (
   <div>
