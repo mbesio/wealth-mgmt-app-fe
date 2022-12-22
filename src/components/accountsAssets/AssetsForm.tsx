@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { TextField, MenuItem, Button, FormLabel } from '@mui/material'
 import { CURRENCIES, CATEGORIES } from '../../utils/Assets'
 
-const AccountAssetsForm = () => {
+const AssetsForm = () => {
   const [formState, setFormState] = useState({
     name: '',
     currency: '',
@@ -81,4 +81,4 @@ const AccountAssetsForm = () => {
   )
 }
 
-export default AccountAssetsForm
+export default AssetsForm

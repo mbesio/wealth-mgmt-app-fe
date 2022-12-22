@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AccountAssetsForm from './components/accountsAssets/AccountsAssetsForm'
+import AssetsView from './components/accountsAssets/AssetsView'
+import AssetsForm from './components/accountsAssets/AssetsForm'
 
 const App = () => (
   <div>
-    <AccountAssetsForm />
+    <AssetsForm />
+    <AssetsView />
   </div>
 )
 
