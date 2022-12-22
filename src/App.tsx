@@ -1,17 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import AccountAssetsForm from './AccountsAssetsForm'
 
 const App = () => (
   <div>
-    hello from the APP
+    <AccountAssetsForm />
   </div>
 )
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement
-)
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-      <App />
+    <App />
   </React.StrictMode>
 )
