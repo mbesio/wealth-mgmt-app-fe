@@ -2,11 +2,11 @@
   "name": "fe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --port 3000",
+    "dev": "parcel serve src/index.html --port 3000",
     "format": "prettier --write \"src/**/*.(ts, tsx)\"",
-    "lint": "eslint \"src/**/*.(ts, tsx)\" --quiet"
+    "lint": "eslint \"src/**/*.(ts, tsx)\" --quiet",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
